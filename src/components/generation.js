@@ -14,6 +14,7 @@ function shuffle(array) {
 }
 
 const generate = (size) => {
+  if (size === 0) return []
     const options = size**2 - 1
     const single = [...Array(options/2).keys()]
     const pairs = [...single, ...single, "!"]

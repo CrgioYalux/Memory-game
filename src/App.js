@@ -4,6 +4,7 @@ import Board from './components/board'
 import Difficulty from './components/difficulty'
 import Counter from './components/counter'
 
+
 function App() {
   const [difficulty, setDifficulty] = useState()
   const [visibility, setVisibility] = useState(false)
@@ -44,7 +45,7 @@ function App() {
           { visibility ? <Counter initialSeconds={time}/> : null }
       </div>
     </>
-  );
+  );  
 }
 
 export default App;

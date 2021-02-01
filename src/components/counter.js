@@ -33,7 +33,7 @@ const Timer = (props) => {
         <div>
         { minutes === 0 && seconds === 0
             ? null
-            : <h1> {minutes}:{seconds < 10 ?  `0${seconds}` : seconds}</h1> 
+            : <h1 class="font-mono text-center italic leading-8 font-semibold text-base md:text-xl">hiding in <span class="font-sans bg-blue-400 p-1">{seconds < 10 ?  `0${seconds}` : seconds}</span> seconds</h1> 
         }
         </div>
     )
