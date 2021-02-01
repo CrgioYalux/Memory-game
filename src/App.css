@@ -1,38 +1,41 @@
-.App {
-  text-align: center;
+:root {
+  --gradient: linear-gradient(
+    45deg,
+    #1d1160,
+    #800080,
+    #662d91,
+    #4b0082,
+    #845ec2,
+    #33006f
+  );
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.back {
+  position: absolute;
+
+  z-index: -100;
+  height: 100vh;
+  width: 100vw;
+  /* background-image: linear-gradient(#2a265f80, #2a265fd7),
+    url("./assets/alexandra-i-XPMIU8nHBCY-unsplash.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: blur(5px);
+  -webkit-filter: blur(5px); */
+  background: #ddd;
+  background-image: var(--gradient);
+  background-size: 400%;
+  animation: bg-animation 20s infinite alternate;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@keyframes bg-animation {
+  0% {
+    background-position: left;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+  100% {
+    background-position: right;
   }
 }
