@@ -1,6 +1,6 @@
 import './css/animation.css'
 import React, {useEffect, useState} from 'react'
-const generate = require('./generation')
+import generate from './generation'
 
 const Board = ({difficulty = 0, visibility, isPlaying, handleWinning, handleLosing}) => {
     const [selected, setSelected] = useState([])

@@ -21,4 +21,4 @@ const generate = (size) => {
     return shuffle(pairs)
 }
 
-module.exports = generate
+export default generate
